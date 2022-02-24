@@ -1,0 +1,29 @@
+@media (max-width: 767px) {
+  .student:not(:last-child) {
+    margin-bottom: calc( 40px + 136 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .student:not(:last-child) {
+    margin-bottom: calc(40px + 80 * (100vw / 1620));
+  }
+}
+
+.student__img {
+  margin-bottom: 15px;
+  max-width: 376px;
+  height: 392px;
+}
+
+.student__img img {
+  width: 100%;
+}
+
+.student__name, .student__position {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #147a62;
+  margin-bottom: 15px;
+}

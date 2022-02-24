@@ -1,0 +1,129 @@
+.best {
+  position: relative;
+  z-index: 2;
+  max-width: 908px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.best:nth-child(odd) {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+@media (max-width: 650px) {
+  .best {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .best {
+    -webkit-column-gap: calc( 50px + 119 * ((100vw - 320px) / 1620));
+            column-gap: calc( 50px + 119 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .best {
+    -webkit-column-gap: calc(50px + 70 * (100vw / 1620));
+            column-gap: calc(50px + 70 * (100vw / 1620));
+  }
+}
+
+.best:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.best__content {
+  color: black;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 430px;
+          flex: 0 1 430px;
+}
+
+.best__position {
+  font-weight: 600;
+  font-size: 14.5957px;
+  line-height: 18px;
+  text-align: center;
+  color: #ab7e33;
+}
+
+@media (max-width: 767px) {
+  .best__position {
+    margin-bottom: calc( 30px + 25.5 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .best__position {
+    margin-bottom: calc(30px + 15 * (100vw / 1620));
+  }
+}
+
+.best__name {
+  font-weight: 600;
+  line-height: 34px;
+  text-align: center;
+  color: #303030;
+}
+
+@media (max-width: 767px) {
+  .best__name {
+    font-size: calc( 20px + 13.6 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .best__name {
+    font-size: calc(20px + 8 * (100vw / 1620));
+  }
+}
+
+@media (max-width: 767px) {
+  .best__name {
+    margin-bottom: calc( 30px + 25.5 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .best__name {
+    margin-bottom: calc(30px + 15 * (100vw / 1620));
+  }
+}
+
+.best__info {
+  font-weight: normal;
+  line-height: 21px;
+  text-align: center;
+  color: #303030;
+}
+
+@media (max-width: 767px) {
+  .best__info {
+    font-size: calc( 14px + 5.1 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .best__info {
+    font-size: calc(14px + 3 * (100vw / 1620));
+  }
+}
+
+.best__img {
+  max-width: 372px;
+  max-height: 392px;
+}
+
+.best__img img {
+  width: 100%;
+}
