@@ -141,19 +141,19 @@
   }
 }
 
-.specialties__btn:hover {
-  background: #147a62;
-  -webkit-box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25), 4px 4px 15px rgba(255, 255, 255, 0.25);
-          box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25), 4px 4px 15px rgba(255, 255, 255, 0.25);
-  color: white;
-}
-
-.specialties__btn:hover .icon-earth {
-  color: white;
-}
-
-.specialties__btn:hover .icon-graduate {
-  color: white;
+@media (any-hover: hover) {
+  .specialties__btn:hover {
+    background: #147a62;
+    -webkit-box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25), 4px 4px 15px rgba(255, 255, 255, 0.25);
+            box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25), 4px 4px 15px rgba(255, 255, 255, 0.25);
+    color: white;
+  }
+  .specialties__btn:hover .icon-earth {
+    color: white;
+  }
+  .specialties__btn:hover .icon-graduate {
+    color: white;
+  }
 }
 
 .specialties__btn-more {
@@ -196,9 +196,11 @@
   }
 }
 
-.specialties__btn-more:hover {
-  background: #fcfcfc;
-  color: black;
+@media (any-hover: hover) {
+  .specialties__btn-more:hover {
+    background: #fcfcfc;
+    color: black;
+  }
 }
 
 .icon-earth {

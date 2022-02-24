@@ -26,6 +26,9 @@ $maxWidth: 1620;
   }
   &__item {
     flex: 1 1 40%;
+    @media (max-width: 800px) {
+      flex: 0 0 100%;
+    }
   }
   &__title {
     font-weight: 600;
@@ -41,6 +44,7 @@ $maxWidth: 1620;
     font-size: 18px;
     line-height: 22px;
     color: #303030;
+    max-width: 600px;
   }
   &__item-img {
     overflow: hidden;

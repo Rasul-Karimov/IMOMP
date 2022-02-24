@@ -8,30 +8,15 @@ const Footer = () => {
         <div className="footer__items">
           <div className="footer__item">
             <div className="footer__item-block">
-              <div className="footer__title">Об институте </div>
+              <div className="footer__title">Абитуриентам</div>
               <ul className="footer__list">
                 <li className="footer__item-item">
-                  <Link to="#" className="footer__link">
-                    Персонал
-                  </Link>
-                </li>
-                <li className="footer__item-item">
-                  <Link to="#" className="footer__link">
-                    Достижения
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="footer__item-block">
-              <div className="footer__title">Абитуридентам</div>
-              <ul className="footer__list">
-                <li className="footer__item-item">
-                  <Link to="#" className="footer__link">
+                  <Link to="/forStudents" className="footer__link">
                     Направление
                   </Link>
                 </li>
                 <li className="footer__item-item">
-                  <Link to="#" className="footer__link">
+                  <Link to="/reception" className="footer__link">
                     Правила приема
                   </Link>
                 </li>
@@ -41,19 +26,23 @@ const Footer = () => {
               <div className="footer__title">Студентам</div>
               <ul className="footer__list">
                 <li className="footer__item-item">
-                  <Link to="#" className="footer__link">
+                  <Link to="/management" className="footer__link">
                     Студенческий совет
                   </Link>
                 </li>
                 <li className="footer__item-item">
-                  <Link to="#" className="footer__link">
+                  <Link to="/bests" className="footer__link">
                     Лучшие студенты
                   </Link>
                 </li>
                 <li className="footer__item-item">
-                  <Link to="#" className="footer__link">
+                  <a
+                    target="blank"
+                    href="http://avn.ksla.kg/"
+                    className="footer__link"
+                  >
                     Портал
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -72,7 +61,11 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="footer__item-item ">
-                    <a href="#" className="footer__link icon-location2">
+                    <a
+                      target="blank"
+                      href="https://2gis.kg/bishkek/firm/70000001040535756?m=74.629838%2C42.855611%2F16"
+                      className="footer__link icon-location2"
+                    >
                       уль. Горького 18
                     </a>
                   </li>

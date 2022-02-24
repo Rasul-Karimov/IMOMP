@@ -22,6 +22,9 @@
   min-height: 100px;
   padding: 20px 0;
   color: black;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 @media (max-width: 500px) {
@@ -130,7 +133,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     position: absolute;
-    top: 0;
+    top: 60px;
     left: -200%;
     min-height: 100%;
     width: 65%;
@@ -151,25 +154,6 @@
 
 .header__menu._active {
   left: 0;
-}
-
-.header__btn {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  .header__btn {
-    display: block;
-  }
-  .header__btn span {
-    display: block;
-    width: 35px;
-    height: 2px;
-    background-color: #fff;
-  }
-  .header__btn span:not(:last-child) {
-    margin-bottom: 8px;
-  }
 }
 
 .header__item {
@@ -196,6 +180,8 @@
   color: #ffffff;
   display: inline-block;
   padding: 10px 0;
+  -webkit-transition: all ease 300ms 0s;
+  transition: all ease 300ms 0s;
 }
 
 @media (any-hover: hover) {
@@ -211,6 +197,14 @@
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   pointer-events: painted;
+}
+
+@media (any-hover: hover) {
+  .header__link:hover {
+    color: #25ffcc;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .header__link::before {
@@ -271,6 +265,12 @@
 .header__sub-link {
   color: black;
   line-height: 160%;
+  -webkit-transition: all ease 300ms 0s;
+  transition: all ease 300ms 0s;
+}
+
+.header__sub-link:hover {
+  color: #147a62;
 }
 
 .header__portal {
@@ -278,6 +278,14 @@
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  -webkit-transition: all ease 300ms 0s;
+  transition: all ease 300ms 0s;
+}
+
+.header__portal:hover {
+  color: #25ffcc;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .header__arrow {
@@ -298,6 +306,56 @@
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
   font-size: 24px;
+}
+
+.header__btn {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .header__btn {
+    display: block;
+  }
+  .header__btn span {
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+  }
+  .header__btn span:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .header__btn span:first-child {
+    -webkit-animation: span1 ease 0s towards;
+            animation: span1 ease 0s towards;
+  }
+  .header__btn span:nth-child(1) {
+    -webkit-animation: span-back1 300ms ease 0s forwards;
+            animation: span-back1 300ms ease 0s forwards;
+  }
+  .header__btn span:nth-child(2) {
+    -webkit-animation: span-back2 300ms ease 0s forwards;
+            animation: span-back2 300ms ease 0s forwards;
+  }
+  .header__btn span:nth-child(3) {
+    -webkit-animation: span-back3 300ms ease 0s forwards;
+            animation: span-back3 300ms ease 0s forwards;
+  }
+}
+
+.header__menu._active ~ .header__btn span:nth-child(1) {
+  -webkit-animation: span1 300ms ease 0s forwards;
+          animation: span1 300ms ease 0s forwards;
+}
+
+.header__menu._active ~ .header__btn span:nth-child(2) {
+  -webkit-animation: span2 300ms ease 0s forwards;
+          animation: span2 300ms ease 0s forwards;
+}
+
+.header__menu._active ~ .header__btn span:nth-child(3) {
+  -webkit-animation: span3 300ms ease 0s forwards;
+          animation: span3 300ms ease 0s forwards;
 }
 
 .icon-user {
@@ -413,5 +471,137 @@
   100% {
     -webkit-transform: translate(0, 30px);
             transform: translate(0, 30px);
+  }
+}
+
+@-webkit-keyframes span1 {
+  0% {
+    -webkit-transform: rotate(0) translate(0);
+            transform: rotate(0) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(0px, 14px);
+            transform: rotate(45deg) translate(0px, 14px);
+  }
+}
+
+@keyframes span1 {
+  0% {
+    -webkit-transform: rotate(0) translate(0);
+            transform: rotate(0) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(0px, 14px);
+            transform: rotate(45deg) translate(0px, 14px);
+  }
+}
+
+@-webkit-keyframes span2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes span2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes span3 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(0, -14px);
+            transform: rotate(-45deg) translate(0, -14px);
+  }
+}
+
+@keyframes span3 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(0, -14px);
+            transform: rotate(-45deg) translate(0, -14px);
+  }
+}
+
+@-webkit-keyframes span-back1 {
+  0% {
+    -webkit-transform: rotate(45deg) translate(0, 22px);
+            transform: rotate(45deg) translate(0, 22px);
+  }
+  100% {
+    -webkit-transform: rotate(0) translate(0);
+            transform: rotate(0) translate(0);
+  }
+}
+
+@keyframes span-back1 {
+  0% {
+    -webkit-transform: rotate(45deg) translate(0, 22px);
+            transform: rotate(45deg) translate(0, 22px);
+  }
+  100% {
+    -webkit-transform: rotate(0) translate(0);
+            transform: rotate(0) translate(0);
+  }
+}
+
+@-webkit-keyframes span-back2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes span-back2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes span-back3 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, -21px);
+            transform: rotate(-45deg) translate(0, -21px);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes span-back3 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, -21px);
+            transform: rotate(-45deg) translate(0, -21px);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }

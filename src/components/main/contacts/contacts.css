@@ -1,1 +1,250 @@
-/* No CSS */
+.contacts__title {
+  font-weight: bold;
+  line-height: 150%;
+  text-align: center;
+  color: #147a62;
+}
+
+@media (max-width: 767px) {
+  .contacts__title {
+    font-size: calc( 24px + 20.4 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .contacts__title {
+    font-size: calc(24px + 12 * (100vw / 1620));
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts__title {
+    padding-top: calc( 30px + 51 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .contacts__title {
+    padding-top: calc(30px + 30 * (100vw / 1620));
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts__title {
+    padding-bottom: calc( 50px + 85 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .contacts__title {
+    padding-bottom: calc(50px + 50 * (100vw / 1620));
+  }
+}
+
+.contacts__fon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.contacts__adres {
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 767px) {
+  .contacts__adres {
+    font-size: calc( 14px + 17 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .contacts__adres {
+    font-size: calc(14px + 10 * (100vw / 1620));
+  }
+}
+
+.contacts__adres span {
+  font-size: 24px;
+  line-height: 28px;
+  color: #147a62;
+  margin-right: 200px;
+}
+
+@media (max-width: 767px) {
+  .contacts__adres span {
+    margin-right: calc( 100px + 170 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .contacts__adres span {
+    margin-right: calc(100px + 100 * (100vw / 1620));
+  }
+}
+
+@media (max-width: 780px) {
+  .contacts__adres span {
+    display: block;
+  }
+}
+
+.contacts__phone {
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 767px) {
+  .contacts__phone {
+    font-size: calc( 14px + 17 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .contacts__phone {
+    font-size: calc(14px + 10 * (100vw / 1620));
+  }
+}
+
+.contacts__phone span {
+  font-size: 24px;
+  line-height: 28px;
+  color: #147a62;
+  margin-right: 200px;
+}
+
+@media (max-width: 767px) {
+  .contacts__phone span {
+    margin-right: calc( 100px + 170 * ((100vw - 320px) / 1620));
+  }
+}
+
+@media (min-width: 767px) {
+  .contacts__phone span {
+    margin-right: calc(100px + 100 * (100vw / 1620));
+  }
+}
+
+@media (max-width: 780px) {
+  .contacts__phone span {
+    display: block;
+  }
+}
+
+.contacts__messengers {
+  padding: 30px 0 0 0;
+  margin-bottom: 138px;
+  color: #147a62;
+}
+
+.messengers-contacts {
+  font-size: 24px;
+  line-height: 28px;
+  color: #147a62;
+}
+
+.messengers-contacts__title {
+  margin-bottom: 28px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #147a62;
+}
+
+.messengers-contacts__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.messengers-contacts__items .icon-whatsapp {
+  -webkit-transition: all ease 300ms 0s;
+  transition: all ease 300ms 0s;
+}
+
+.messengers-contacts__items .icon-whatsapp:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #29e7bb;
+}
+
+.messengers-contacts__items .icon-fasebook {
+  -webkit-transition: all ease 300ms 0s;
+  transition: all ease 300ms 0s;
+}
+
+.messengers-contacts__items .icon-fasebook:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #29e7bb;
+}
+
+.messengers-contacts__items .icon-instagram {
+  -webkit-transition: all ease 300ms 0s;
+  transition: all ease 300ms 0s;
+}
+
+.messengers-contacts__items .icon-instagram:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #29e7bb;
+}
+
+.contact__map-img {
+  position: relative;
+  max-width: 816px;
+  max-height: 738px;
+  margin: 0 auto;
+  margin-bottom: 58px;
+}
+
+.contact__map-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(320.62deg, #147a62 -1.55%, rgba(20, 122, 98, 0) 36.54%), linear-gradient(133.21deg, #147a62 0.95%, rgba(20, 122, 98, 0) 78.85%);
+  border-radius: 89px;
+}
+
+.contact__map-img img {
+  width: 100%;
+}
+
+.icon-contacts * {
+  -webkit-transition: all ease 300ms 0s;
+  transition: all ease 300ms 0s;
+}
+
+.icon-contacts:hover * {
+  fill: #59b4fa;
+}
+
+iframe {
+  border-radius: 89px;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 680px) {
+  iframe {
+    height: 350px;
+  }
+}

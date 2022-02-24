@@ -61,6 +61,14 @@
           flex: 1 1 40%;
 }
 
+@media (max-width: 800px) {
+  .information__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 .information__title {
   font-weight: 600;
   line-height: 150%;
@@ -97,6 +105,7 @@
   font-size: 18px;
   line-height: 22px;
   color: #303030;
+  max-width: 600px;
 }
 
 .information__item-img {

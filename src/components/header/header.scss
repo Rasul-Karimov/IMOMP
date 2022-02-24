@@ -30,6 +30,8 @@ $maxWidth: 1640;
     min-height: 100px;
     padding: 20px 0;
     color: black;
+    flex-wrap: wrap;
+    row-gap: 10px;
   }
   &__top-logo {
     @media (max-width: 500px) {
@@ -87,7 +89,7 @@ $maxWidth: 1640;
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       position: absolute;
-      top: 0;
+      top: 60px;
       left: -200%;
       min-height: 100%;
       width: 65%;
@@ -108,21 +110,7 @@ $maxWidth: 1640;
       left: 0;
     }
   }
-  &__btn {
-    display: none;
-    @media (max-width: 1200px) {
-      display: block;
-      span {
-        display: block;
-        width: 35px;
-        height: 2px;
-        background-color: #fff;
-        &:not(:last-child) {
-          margin-bottom: 8px;
-        }
-      }
-    }
-  }
+
   &__item {
     position: relative;
   }
@@ -150,6 +138,13 @@ $maxWidth: 1640;
       visibility: visible;
       transform: translate(0, 0);
       pointer-events: painted;
+    }
+    transition: all ease 300ms 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #25ffcc;
+        transform: scale(1.1);
+      }
     }
   }
   &__link::before {
@@ -195,12 +190,21 @@ $maxWidth: 1640;
   &__sub-link {
     color: black;
     line-height: 160%;
+    transition: all ease 300ms 0s;
+    &:hover {
+      color: #147a62;
+    }
   }
   &__portal {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
+    transition: all ease 300ms 0s;
+    &:hover {
+      color: #25ffcc;
+      transform: scale(1.1);
+    }
   }
   &__arrow {
     display: flex;
@@ -211,6 +215,49 @@ $maxWidth: 1640;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     font-size: 24px;
+  }
+
+  &__btn {
+    display: none;
+    @media (max-width: 1200px) {
+      display: block;
+      span {
+        display: block;
+        width: 35px;
+        height: 2px;
+        background-color: #fff;
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+        &:first-child {
+          animation: span1 ease 0s towards;
+        }
+      }
+      span {
+        &:nth-child(1) {
+          animation: span-back1 300ms ease 0s forwards;
+        }
+        &:nth-child(2) {
+          animation: span-back2 300ms ease 0s forwards;
+        }
+        &:nth-child(3) {
+          animation: span-back3 300ms ease 0s forwards;
+        }
+      }
+    }
+  }
+  &__menu._active ~ &__btn {
+    span {
+      &:nth-child(1) {
+        animation: span1 300ms ease 0s forwards;
+      }
+      &:nth-child(2) {
+        animation: span2 300ms ease 0s forwards;
+      }
+      &:nth-child(3) {
+        animation: span3 300ms ease 0s forwards;
+      }
+    }
   }
 }
 .icon-user {
@@ -264,5 +311,55 @@ $maxWidth: 1640;
   }
   100% {
     transform: translate(0, 30px);
+  }
+}
+
+@keyframes span1 {
+  0% {
+    transform: rotate(0) translate(0);
+  }
+  100% {
+    transform: rotate(45deg) translate(0px, 14px);
+  }
+}
+@keyframes span2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes span3 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-45deg) translate(0, -14px);
+  }
+}
+
+@keyframes span-back1 {
+  0% {
+    transform: rotate(45deg) translate(0, 22px);
+  }
+  100% {
+    transform: rotate(0) translate(0);
+  }
+}
+@keyframes span-back2 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes span-back3 {
+  0% {
+    transform: rotate(-45deg) translate(0, -21px);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

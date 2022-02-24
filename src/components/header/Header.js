@@ -78,27 +78,18 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="header__item">
-                <Link
+                <NavLink
                   onClick={handleCloseMenu}
                   to="/reception"
                   className="header__link"
                 >
                   Прием абитуриентов
-                </Link>
-              </li>
-              <li className="header__item">
-                <Link
-                  onClick={handleCloseMenu}
-                  to="/forStudents"
-                  className="header__link"
-                >
-                  Направление
-                </Link>
+                </NavLink>
               </li>
               <li className="header__item ">
                 <NavLink
                   onClick={handleClick}
-                  to="#"
+                  to="/bests"
                   className={`header__link icon-arrow-up ${
                     dropdown && "_active"
                   }`}
@@ -106,34 +97,42 @@ const Header = () => {
                   Студентам
                   <ul className="header__sub-list">
                     <li className="header__sub-item">
-                      <Link
+                      <NavLink
                         onClick={handleCloseMenu}
                         to="/management"
                         className="header__sub-link"
                       >
                         Студенческий совет
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="header__sub-item">
-                      <Link
+                      <NavLink
                         onClick={handleCloseMenu}
                         to="/bests"
                         className="header__sub-link"
                       >
                         Лучшие студенты
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </NavLink>
               </li>
               <li className="header__item">
-                <NavLink to="/contacts" className="header__link">
+                <NavLink
+                  onClick={handleCloseMenu}
+                  to="/contacts"
+                  className="header__link"
+                >
                   Контакты
                 </NavLink>
               </li>
             </ul>
           </nav>
-          <a href="#" className="header__portal">
+          <a
+            target="blank"
+            href="http://avn.ksla.kg/"
+            className="header__portal"
+          >
             <span className="icon-user"></span>
             портал
           </a>
