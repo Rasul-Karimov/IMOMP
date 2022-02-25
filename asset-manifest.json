@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/IMOMP/static/css/main.a714b2d8.css",
+    "main.js": "/IMOMP/static/js/main.dfabd7e7.js",
+    "index.html": "/IMOMP/index.html",
+    "main.a714b2d8.css.map": "/IMOMP/static/css/main.a714b2d8.css.map",
+    "main.dfabd7e7.js.map": "/IMOMP/static/js/main.dfabd7e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a714b2d8.css",
+    "static/js/main.dfabd7e7.js"
+  ]
+}
